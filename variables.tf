@@ -2,7 +2,7 @@ variable "cluster_name" {
   description = "The name to use to create the cluster and the resources. Only alphanumeric characters and dash allowed (e.g. 'my-cluster')"
 }
 variable "region" {
-  default     = "us-east-1"
+  default     = null
   description = "The AWS region where to launch the cluster and releated resources"
 }
 variable "ssh_key_name" {
@@ -19,7 +19,7 @@ variable "spot_bid_price" {
   default = "0.0113"
 }
 variable "min_spot_instances" {
-  default     = "1"
+  default     = "0"
   description = "The minimum EC2 spot instances to have available within the cluster when the cluster receives less traffic"
 }
 variable "max_spot_instances" {

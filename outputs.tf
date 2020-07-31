@@ -2,10 +2,6 @@ output "cluster_id" {
   value = aws_ecs_cluster.ecs_cluster.id
 }
 
-output "service_discovery_dns_id" {
-  value = aws_service_discovery_private_dns_namespace.theconnectedpet.id
-}
-
 output "ecs_task_execution_role_arn" {
   value = aws_iam_role.ecs_task_execution_role.arn
 }
