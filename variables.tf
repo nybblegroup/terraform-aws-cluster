@@ -56,7 +56,7 @@ variable "create_vpc" {
 }
 
 variable "ecs_ami_id" {
-  default = "ami-07ca57c20804e0574"
+  default = null
 }
 
 variable "account_id" {
