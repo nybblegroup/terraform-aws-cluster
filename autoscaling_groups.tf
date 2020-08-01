@@ -9,6 +9,7 @@ resource "aws_autoscaling_group" "ecs_cluster_ondemand" {
   min_size                  = var.min_ondemand_instances
   desired_capacity          = var.min_ondemand_instances
   launch_configuration      = aws_launch_configuration.ecs_config_launch_config_ondemand.name
+  protect_from_scale_in     = true
 
   lifecycle {
     create_before_destroy = true
@@ -34,6 +35,7 @@ resource "aws_autoscaling_group" "ecs_cluster_spot" {
   min_size                  = var.min_spot_instances
   desired_capacity          = var.min_spot_instances
   launch_configuration      = aws_launch_configuration.ecs_config_launch_config_spot.name
+  protect_from_scale_in     = true
 
   lifecycle {
     create_before_destroy = true
