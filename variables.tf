@@ -96,3 +96,7 @@ variable "github_runner_org" {
 variable "github_runner_labels" {
   default = null
 }
+
+variable "default_capacity_provider_strategies" {
+  default = []
+}
