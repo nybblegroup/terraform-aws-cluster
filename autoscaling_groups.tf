@@ -6,7 +6,7 @@ resource "aws_autoscaling_group" "ecs_cluster_ondemand" {
   health_check_grace_period = 30
   max_size                  = var.max_ondemand_instances
   min_size                  = var.min_ondemand_instances
-  desired_capacity          = var.min_ondemand_instances
+  desired_capacity          = null
   launch_configuration      = aws_launch_configuration.ecs_config_launch_config_ondemand.name
   protect_from_scale_in     = true
 
@@ -32,7 +32,7 @@ resource "aws_autoscaling_group" "ecs_cluster_spot" {
   health_check_grace_period = 30
   max_size                  = var.max_spot_instances
   min_size                  = var.min_spot_instances
-  desired_capacity          = var.min_spot_instances
+  desired_capacity          = null
   launch_configuration      = aws_launch_configuration.ecs_config_launch_config_spot.name
   protect_from_scale_in     = true
 
